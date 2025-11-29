@@ -10,18 +10,18 @@ class SnakePart {
   }
 }
 // speed of the game
-let speed = 7;
+let speed = 6;
 // size and count of a tile 
 let tileCount = 20;
-let tileSize = canvas.width / tileCount - 2;
+let tileSize = canvas.width / tileCount - 3;
 // head of the snake
 let headX = 10;
 let headY = 10;
 let snakeParts = [];
-let tailLength = 2;
+let tailLength = 3;
 // apple size
-let appleX = 5;
-let appleY = 5;
+let appleX = 6;
+let appleY = 6;
 // movement
 let inputsXVelocity = 0;
 let inputsYVelocity = 0;
@@ -56,7 +56,7 @@ function drawGame() {
     speed = 9;
   }
   if (score > 10) {
-    speed = 11;
+    speed = 13;
   }
 
   setTimeout(drawGame, 1000 / speed);
