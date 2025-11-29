@@ -1,6 +1,8 @@
 let canvas = document.getElementById("game");
 let ctx = canvas.getContext("2d");  
 // draw on the screen to get the context, ask canvas  to get the 2d context
+let appleImage = new Image();
+appleImage.src = "apple.jpg";
 
 // snake axis
 class SnakePart {
@@ -146,8 +148,13 @@ function changeSnakePosition() {
 }
 
 function drawApple() {
-  ctx.fillStyle = "red";
-  ctx.fillRect(appleX * tileCount, appleY * tileCount, tileSize, tileSize);
+  ctx.drawImage(
+    appleImage,
+    appleX * tileCount,
+    appleY * tileCount,
+    tileSize,
+    tileSize
+  );
 }
 
 function checkAppleCollision() {
